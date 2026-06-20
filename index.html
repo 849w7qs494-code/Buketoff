@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuketOff - Цветочный бутик</title>
+    <meta name="description" content="Авторские букеты и цветочные композиции от Buketoff. Свежие цветы, доставка, уникальный дизайн.">
+    <meta name="keywords" content="цветы, букеты, доставка цветов, авторские букеты, флористика, Buketoff">
+    
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ==================== ШАПКА ==================== -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">Buket<span>Off</span></a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#catalog">Каталог</a></li>
+                    <li><a href="#advantages">Преимущества</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="tel:+78005553535" class="header-phone">
+                    <i class="fas fa-phone"></i> +7 (800) 555-35-35
+                </a>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== ГЛАВНЫЙ БАННЕР ==================== -->
+    <section class="hero">
+	<div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+	        <h1>Букеты на заказ</h1>
+                <p>Создаем уникальные композиции для особых моментов</p>
+                <a href="#catalog" class="btn btn-primary">Смотреть каталог</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== О НАС ==================== -->
+    <section id="about" class="about">
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="img/about-flower.jpg" alt="Наш цветочный бутик">
+            </div>
+            <div class="about-content">
+                <h2>О нас</h2>
+                <p><strong>Buketoff</strong> - это не просто магазин, а пространство, где создаются эмоции. Добро пожаловать в наш цветочный бутик - место, где искусство флористики оживает в каждом лепестке.</p>
+                <p>Уже <strong>10 лет</strong> мы создаем красоту, превращая цветы в настоящие произведения искусства, которые дарят радость, вдохновение и незабываемые эмоции.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== КАТАЛОГ ==================== -->
+    <section id="catalog" class="catalog">
+        <div class="container">
+            <h2>Наш каталог</h2>
+            <p class="section-subtitle">Выберите букет, который подарит эмоции</p>
+            
+            <!-- Фильтры -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Все букеты</button>
+                <button class="filter-btn" data-filter="author">Авторские</button>
+                <button class="filter-btn" data-filter="mono">Монобукеты</button>
+                <button class="filter-btn" data-filter="box">Цветы в коробке</button>
+            </div>
+            
+            <!-- Сетка товаров -->
+            <div class="catalog-grid" id="catalogGrid">
+                <!-- Товары генерируются JavaScript -->
+            </div>
+            
+            <!-- Пагинация -->
+            <div class="pagination" id="pagination">
+                <button class="page-btn prev-page" id="prevPage"><i class="fas fa-chevron-left"></i></button>
+                <span class="page-info" id="pageInfo">1 / 0</span>
+                <button class="page-btn next-page" id="nextPage"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ПРЕИМУЩЕСТВА ==================== -->
+    <section id="advantages" class="advantages">
+        <div class="container">
+            <h2>Почему выбирают Buketoff</h2>
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <h3>Только свежие цветы</h3>
+                    <p>Используем только свежие цветы и материалы для создания изысканных композиций.</p>
+                </div>
+                <div class="advantage-item">
+                    <h3>Команда профессионалов</h3>
+                    <p>Наши флористы — профессионалы с большим опытом в создании красивых и гармоничных букетов.</p>
+                </div>
+                <div class="advantage-item">
+                    <h3>Индивидуальный подход</h3>
+                    <p>Создаём уникальные цветочные композиции по индивидуальным пожеланиям клиентов.</p>
+                </div>
+                <div class="advantage-item">
+                    <h3>Быстрая доставка</h3>
+                    <p>Оперативно доставляем заказы в удобное для вас время.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== КОНТАКТЫ ==================== -->
+    <section id="contact" class="contact">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2>Оставьте свои контакты</h2>
+                <p>Мы с удовольствием покажем Вам варианты готовых букетов или подготовим его специально для Вас!</p>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ПОДВАЛ ==================== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 BuketOff. Доставка цветов Калининград</p>
+        </div>
+    </footer>
+
+    <!-- ==================== МОДАЛЬНОЕ ОКНО КОРЗИНЫ ==================== -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <span class="close-cart" id="closeCart">&times;</span>
+            <h2><i class="fas fa-shopping-cart"></i> Ваша корзина</h2>
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart">Корзина пуста</p>
+            </div>
+            <div class="cart-total">
+                <span>Итого:</span>
+                <span id="cartTotalPrice">0 ₽</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" id="checkoutBtn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
