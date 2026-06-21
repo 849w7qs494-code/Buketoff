@@ -626,8 +626,14 @@ img {
 }
 
 .catalog-item .add-to-cart {
+    width: 100%;
+    padding: 12px;
     background-color: #2d4a3b;
     color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
