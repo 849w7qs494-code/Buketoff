@@ -673,12 +673,13 @@ img {
 }
 
 /* ======================================================
-   УПРАВЛЕНИЕ КАТАЛОГОМ (фильтры + сортировка в одну строку)
+   УПРАВЛЕНИЕ КАТАЛОГОМ
    ====================================================== */
 .catalog-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
     flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 40px;
@@ -755,11 +756,11 @@ img {
     box-shadow: 0 0 0 3px rgba(45, 74, 59, 0.08);
 }
 
-/* Адаптивность — на телефонах всё в столбик */
+/* Адаптивность */
 @media (max-width: 768px) {
     .catalog-controls {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: column !important;
+        align-items: stretch !important;
         gap: 15px;
     }
 
@@ -795,7 +796,6 @@ img {
         max-width: 100%;
     }
 }
-
 /* ======================================================
    ПРЕИМУЩЕСТВА
    ====================================================== */
