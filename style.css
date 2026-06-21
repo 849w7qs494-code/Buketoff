@@ -755,7 +755,7 @@ img {
     box-shadow: 0 0 0 3px rgba(45, 74, 59, 0.08);
 }
 
-/* Адаптивность */
+/* Адаптивность — на телефонах всё в столбик */
 @media (max-width: 768px) {
     .catalog-controls {
         flex-direction: column;
