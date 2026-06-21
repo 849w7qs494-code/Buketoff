@@ -680,53 +680,79 @@ img {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
     margin-bottom: 40px;
 }
 
 .filter-buttons {
     display: flex;
-    gap: 15px;
+    gap: 12px;
     flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 24px;
+    border: 2px solid #e8a87c;
+    background: transparent;
+    border-radius: 50px;
+    font-weight: 700;
+    color: #2d4a3b;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    background: #fdf3ed;
+}
+
+.filter-btn.active {
+    background: #e8a87c;
+    color: #fff;
+    border-color: #e8a87c;
 }
 
 .sort-wrapper {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-shrink: 0;
 }
 
 .sort-label {
     font-size: 14px;
-    color: #555;
-    font-weight: 500;
+    color: #888;
+    font-weight: 400;
+    white-space: nowrap;
 }
 
 .sort-select {
-    padding: 10px 18px;
-    border: 2px solid #e8a87c;
+    padding: 8px 18px;
+    border: 1px solid #d0d0d0;
     border-radius: 50px;
     font-size: 14px;
-    font-weight: 500;
-    color: #2d4a3b;
-    background: #ffffff;
+    color: #555;
+    background: #f5f5f5;
     cursor: pointer;
     outline: none;
     transition: all 0.3s ease;
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%232d4a3b' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right 15px center;
-    padding-right: 40px;
+    background-position: right 14px center;
+    padding-right: 38px;
 }
 
 .sort-select:hover {
-    border-color: #d4946a;
+    border-color: #b0b0b0;
+    background-color: #eeeeee;
 }
 
 .sort-select:focus {
-    border-color: #d4946a;
-    box-shadow: 0 0 0 3px rgba(232, 168, 124, 0.2);
+    border-color: #2d4a3b;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(45, 74, 59, 0.08);
 }
 
 /* Адаптивность */
@@ -747,13 +773,18 @@ img {
 
     .sort-select {
         width: 100%;
-        max-width: 250px;
+        max-width: 220px;
     }
 }
 
 @media (max-width: 480px) {
     .filter-buttons {
-        gap: 10px;
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 6px 16px;
+        font-size: 13px;
     }
 
     .sort-wrapper {
