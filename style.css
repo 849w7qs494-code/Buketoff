@@ -640,7 +640,7 @@ img {
     width: 100%;
     padding: 12px;
     margin-top: auto;
-    background-color: #2d4a3b;
+    background: #e8a87c;
     color: #ffffff;
     border: none;
     border-radius: 50px;
@@ -650,9 +650,9 @@ img {
 }
 
 .catalog-item .add-to-cart:hover {
-    background-color: #1d362b;
+    background: #d4946a;
     transform: scale(1.02);
-    box-shadow: 0 4px 15px rgba(45, 74, 59, 0.3);
+    box-shadow: 0 4px 15px rgba(232, 168, 124, 0.4);
 }
 
 /* Пагинация */
