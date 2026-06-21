@@ -626,8 +626,15 @@ img {
 }
 
 .catalog-item .add-to-cart {
-    width: 100%;
-    padding: 12px;
+    background-color: #2d4a3b;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.catalog-item .add-to-cart:hover {
+    background-color: #1d362b;
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(45, 74, 59, 0.3);
 }
 
 /* Пагинация */
