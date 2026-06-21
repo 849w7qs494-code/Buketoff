@@ -532,37 +532,6 @@ img {
     margin-right: auto;
 }
 
-/* Фильтры */
-.filter-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-}
-
-.filter-btn {
-    padding: 10px 28px;
-    border: 2px solid #e8a87c;
-    background: transparent;
-    border-radius: 50px;
-    font-weight: 700;
-    color: #2d4a3b;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 15px;
-}
-
-.filter-btn:hover {
-    background: #fdf3ed;
-}
-
-.filter-btn.active {
-    background: #e8a87c;
-    color: #fff;
-    border-color: #e8a87c;
-}
-
 /* Сетка товаров */
 .catalog-grid {
     display: grid;
