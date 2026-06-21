@@ -88,24 +88,8 @@ const bouquetData = [
 // ============================================================
 let cart = [];
 let currentFilter = 'all';
-let currentSort = 'default';
 let currentPage = 1;
 const itemsPerPage = 6;
-
-// Функция сортировки
-function sortBouquets(data) {
-    const sorted = [...data];
-    switch(currentSort) {
-        case 'price-asc':
-            return sorted.sort((a, b) => a.price - b.price);
-        case 'price-desc':
-            return sorted.sort((a, b) => b.price - a.price);
-        case 'name':
-            return sorted.sort((a, b) => a.name.localeCompare(b.name));
-        default:
-            return sorted;
-    }
-}
 
 // Загружаем корзину из localStorage
 function loadCart() {
@@ -150,16 +134,13 @@ function renderCatalog() {
         ? bouquetData 
         : bouquetData.filter(item => item.category === currentFilter);
     
-    // СОРТИРОВКА (добавлено)
-    const sorted = sortBouquets(filtered);
-    
     // Пагинация
-    const totalPages = Math.ceil(sorted.length / itemsPerPage);
+    const totalPages = Math.ceil(filtered.length / itemsPerPage);
     if (currentPage > totalPages) currentPage = totalPages || 1;
     
     const start = (currentPage - 1) * itemsPerPage;
     const end = start + itemsPerPage;
-    const pageItems = sorted.slice(start, end);
+    const pageItems = filtered.slice(start, end);
     
     // Если нет товаров
     if (pageItems.length === 0) {
@@ -244,16 +225,6 @@ filterBtns.forEach(btn => {
         currentPage = 1;
         renderCatalog();
     });
-});
-
-
-// Обработчик сортировки
-const sortSelect = document.getElementById('sortSelect');
-
-sortSelect.addEventListener('change', function() {
-    currentSort = this.value;
-    currentPage = 1;
-    renderCatalog();
 });
 
 // ============================================================
